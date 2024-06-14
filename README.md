@@ -24,12 +24,6 @@ Strives to be comment free of explaining comments by use of readable and clean c
 
   ### Implicit Multiplication
 
-  ### Dots 
-  ```
-  local number foo.bar = 2
-  ```
-  - Dots can in any variable or idenifier.
-    
   ### Namespaces
   ```
   namespace getMax {
@@ -57,7 +51,7 @@ Strives to be comment free of explaining comments by use of readable and clean c
 
   ### Fraction Type
 
-### Syntax
+## Syntax
 - Function
   ```
   x(number a, string b) -> number {
