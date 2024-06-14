@@ -52,37 +52,17 @@ Strives to be comment free of explaining comments by use of readable and clean c
   ### Fraction Type
 
 ## Syntax
-- Function
+  ### Function
   ```
   x(number a, string b) -> number {
       ...
   }
   ```
 
-- Declaring Variable
+  ### Declaring Variable
   ```
   local number a = 5
   local string b = "Hello, world!"
   global string c = "I am everywhere"
   ```
 
-
-- Dots can be anywhere; Namespaces
-  ```
-  local number foo.bar = 2
-  
-  cars {
-    red = 1
-    blue = 2
-  }
-  a.b {
-    red = 1
-    x(number a, string b) -> number {
-      ...
-    }
-  }
-  a.b.x(5, "hi")
-  
-  ```
-  
-fraction type
