@@ -16,6 +16,8 @@ Strives to be comment free of explaining comments by use of readable and clean c
   - Titling a block of code and seeing exactly what it applies to (unlike a comment would)
   - Repeating code blocks without arguments
 
+  Has its own scope.
+
   Can be ran again if needed by `run xyz` (not a real function so `xyz()` won't work)
   
   Acts like a normal variable and a different type of function.
