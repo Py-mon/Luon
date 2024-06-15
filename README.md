@@ -27,10 +27,10 @@ Strives to be comment free of explaining comments by use of readable and clean c
   ### Namespaces
   ```
   namespace getMax {
-    health() {
+    health() -> number {
       ...
     }
-    stamina() {
+    stamina() -> number {
       ...
     }
   }
