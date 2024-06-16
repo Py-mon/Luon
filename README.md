@@ -73,4 +73,7 @@ Strives to be comment free of explaining comments by use of readable and clean c
   ```
 
   ### Comments
+  ```
+  // This is a comment.
+  ```
 
