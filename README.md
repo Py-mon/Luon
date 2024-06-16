@@ -51,10 +51,10 @@ Strives to be comment free of explaining comments by use of readable and clean c
 
   ### Fraction Type
   ```
-  local fraction = 1/2
+  local fraction half = 1/2
   ```
   ```
-  fraction + 1/4 = 3/4
+  hald + 1/4 = 3/4
   ```
 
 ## Syntax
