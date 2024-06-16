@@ -67,14 +67,21 @@ Strives to be comment free of explaining comments by use of readable and clean c
   ### Class
   ```
   class Car [Cls] inheirts BaseCar {
-      new [instance](string name, number year) {
-          instance.name = name
+      new - (string name, number year) -> Cls {
+          instance = object()
+          instance._name = name
           instance.year = year
       
           instance.drive() {
               print("drive!")
           }
-          +[instance, Cls addend] {
+          property instance.name {
+              setter [new_name] {
+                  instance._name = new_name
+              }
+              getter { return instance._name.lower() }
+          }
+          +[instance, Cls addend] -> number {
               return instance.year + addend.year
           }
       }
