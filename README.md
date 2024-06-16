@@ -66,7 +66,7 @@ Strives to be comment free of explaining comments by use of readable and clean c
   ```
   ### Class
   ```
-  class Car {
+  class Car inheirts BaseCar {
       new [instance](string name, number year) {
           instance.name = name
           instance.year = year
@@ -74,9 +74,11 @@ Strives to be comment free of explaining comments by use of readable and clean c
           instance.drive() {
               print("drive!")
           }
+          +[instance, Car addend] {
+              return instance.year + addend
+          }
       }
-      dunder
-      add [instance, addend]
+      
 
   }
      
