@@ -3,7 +3,7 @@ Strives to be comment free of explaining comments by use of readable and clean c
 - Classless but with Instances
 - High Readability
 
-# Custom Features
+# Unique Features
 
 ### Group Blocks of Code
 
@@ -149,9 +149,7 @@ global string c = "I am everywhere"
 ## Comments
 
 ```
-
 // This is a comment.
-
 ```
 
 # Instance Constructors
