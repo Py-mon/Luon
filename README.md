@@ -66,46 +66,38 @@ Strives to be comment free of explaining comments by use of readable and clean c
   ```
   ### Class
   ```
-  class Car [Cls] inheirts BaseCar {
-      new - (string name, number year) -> Cls {
-          instance = object()
-          instance._name = name
-          instance.year = year
-      
-          instance.drive() {
-              print("drive!")
-          }
-          property instance.name {
-              setter [new_name] {
-                  instance._name = new_name
-              }
-              getter { return instance._name.lower() }
-          }
-          +[instance, Cls addend] -> number {
-              return instance.year + addend.year
-          }
+  //  Class Methods
+  namespace Car inheirts BaseCar {
+      number AmountOfCars = 0
+      number X = 5
+
+      myClassMethod() -> x {
+          
       }
-      
 
   }
-  class Car [Cls] (string name, number year) -> Cls {
-        instance = BaseCar()
-        instance._name = name
-        instance.year = year
-    
-        instance.drive() {
-            print("drive!")
-        }
-        property instance.name {
-            setter [new_name] {
-                instance._name = new_name
-            }
-            getter { return instance._name.lower() }
-        }
-        +[instance, Cls addend] -> number {
-            return instance.year + addend.year
-        }
-        return instance
+
+  }
+  class Car [Cls] (string name, number year) {
+      instance = BaseCar()
+      instance._name = name
+      instance.year = year
+  
+      instance.drive() {
+          print("drive!")
+      }
+      property instance.name {
+          setter [new_name] {
+                  instance._name = new_name
+              }
+         getter -> string {
+                  return instance._name.lower()
+              }
+      }
+      +[instance, Cls addend] -> number {
+          return instance.year + addend.year
+      }
+      return instance
  }
 
 
