@@ -88,7 +88,26 @@ Strives to be comment free of explaining comments by use of readable and clean c
       
 
   }
-     
+  class Car [Cls] (string name, number year) -> Cls {
+        instance = BaseCar()
+        instance._name = name
+        instance.year = year
+    
+        instance.drive() {
+            print("drive!")
+        }
+        property instance.name {
+            setter [new_name] {
+                instance._name = new_name
+            }
+            getter { return instance._name.lower() }
+        }
+        +[instance, Cls addend] -> number {
+            return instance.year + addend.year
+        }
+        return instance
+ }
+
 
 
   ```
