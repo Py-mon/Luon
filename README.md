@@ -74,7 +74,7 @@ half + 1/4 = 3/4
 
 # Syntax
 
-### Function
+## Function
 
 <!-- => [1, 2] Literals? -->
 
@@ -84,8 +84,16 @@ x(number a, string b) -> number {
 }
 ```
 
-# Instances
+### Literals
+Notice `=>` vs `->`
+```
+x(number a, string b) => 1  {
+    return 1
+}
+```
 
+
+# Instances
 ```
 instance = Instance()
 instance._name = "Cleo"
@@ -97,7 +105,6 @@ instance.hello() {
 ```
 
 ### Properties
-
 ```
 property instance.name {
     setter [string new_name] {
@@ -114,7 +121,6 @@ instance.name => cleo
 ```
 
 ### Math Operations
-
 ```
 +[instance, number addend] -> number {
     return instance.age + addend
@@ -126,7 +132,6 @@ instance + 5 => 11
 ```
 
 ### Overloading
-
 ```
 overload +[instance, string addend] -> number {
     return instance.name + addend
@@ -138,7 +143,6 @@ instance + "n" => "cleon"
 ```
 
 # Declaring Variable
-
 ```
 local number a = 5
 local string b = "Hello, world!"
@@ -147,13 +151,11 @@ global string c = "I am everywhere"
 ```
 
 ## Comments
-
 ```
 // This is a comment.
 ```
 
 # Instance Constructors
-
 ```
 Animal(string name, number age) -> [Animal] {
     instance = Instance()
@@ -170,9 +172,6 @@ local Cat = Animal("Cleo", 6)
 ```
 
 ## Multiple Constructors
-
-<!--inherits namespace-->
-
 ```
 namespace Animal {
     createNewborn(string name) -> Animal {
@@ -183,7 +182,6 @@ local Cat = Animal("Cleo", 6)
 ```
 
 ### Sub-Constructors
-
 ```
 Dog(string name, number age, string species) -> [Dog] {
     instance = Animal(name, age)
@@ -200,7 +198,6 @@ local Doggie = Dog("Doggie", 2, "German Shepard")
 ```
 
 ### Inheriting Namespaces
-
 ```
 namespace Dog inherits Animal
 
