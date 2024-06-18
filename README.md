@@ -78,6 +78,7 @@ x(number a, string b) -> number {
 ```
 
 ## Instances
+
 ```
 Animal(string name, number age) -> [Animal] {
     instance = new Instance()
@@ -90,6 +91,7 @@ local Cat = Animal("Cleo", 6)
 ```
 
 ## Multiple Constructors
+
 ```
 namespace Animal {
     createNewborn(string name) -> Animal {
@@ -99,6 +101,7 @@ namespace Animal {
 ```
 
 ### Subclasses Sub-constructors
+
 ```
 Dog(string name, number age, string species) -> [Dog] {
     instance = Animal(name, age)
