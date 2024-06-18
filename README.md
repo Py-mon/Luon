@@ -216,7 +216,7 @@ Dog.createNewborn("Baby")
 - `->` Returning a type
   - `-> [X]` Returning a new type of Instance called `X`
 - `=>` Returning literal values
-- `x[]` Implict Arguments (Only for Math Operations right now: `x + y` -> `+[x, y]`)
+- `x[]` Implict Arguments (Only for Math Operations and setter right now: `x + y` -> `+[x, y]`, `x.name = y` -> `setter [y] {...}`)
 - `{}` Bounds of Contents / Indentation / New Scope
 - `//` Comments
 - `"""` Multi-line Comments
