@@ -2,6 +2,8 @@ Strives to be comment free of explaining comments by use of readable and clean c
 
 - Classless but with Instances
 - High Readability
+- Built-in features that are usually imported
+- Typed Language
 
 # Unique Features
 
@@ -25,12 +27,18 @@ Has its own scope.
 Can be ran again if needed by `run xyz` (not a real function so `xyz()` won't work)
 
 ### Implicit Multiplication
+Multiply numbers and variables next to eachother.
 ```
 2(2) => 4
 5(3 + 2) => 25
 ```
+```
+x = 5
+2x => 10
+```
 
 ### Namespaces
+Organize and group functions and other variables.
 ```
 namespace getMax {
   health() -> number {
@@ -46,6 +54,7 @@ getMax.stamina()
 ```
 
 ### Enum
+Store values.
 ```
 enum Colors {
   RED,
@@ -190,3 +199,37 @@ namespace Dog inherits Animal
 
 Dog.createNewborn("Baby")
 ```
+
+# Keywords
+- `namespace`
+- `inheirts`
+- `local`
+- `global`
+- `overload`
+- `property`
+    - `getter`
+    - `setter`
+- `enum`
+- `run`
+
+## Keys 
+- `->` Returning a type
+  - `-> [X]` Returning a new type of Instance called `X`
+- `=>` Returning literal values
+- `x[]` Implict Arguments (Only for Math Operations right now: `x + y` -> `+[x, y]`)
+- `{}` Bounds of Contents / Indentation / New Scope
+- `//` Comments
+- `"""` Multi-line Comments
+- `#` Get length of
+- `()` Calling Function
+- `""` Strings
+
+## Types
+- string
+- number
+- fraction
+
+## Built-In
+- print
+- Instance
+- 
