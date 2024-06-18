@@ -6,7 +6,6 @@ Strives to be comment free of explaining comments by use of readable and clean c
 # Unique Features
 
 ### Group Blocks of Code
-
 ```
 run xyz {
     ...
@@ -26,14 +25,12 @@ Has its own scope.
 Can be ran again if needed by `run xyz` (not a real function so `xyz()` won't work)
 
 ### Implicit Multiplication
-
 ```
 2(2) => 4
 5(3 + 2) => 25
 ```
 
 ### Namespaces
-
 ```
 namespace getMax {
   health() -> number {
@@ -44,30 +41,25 @@ namespace getMax {
   }
 }
 ```
-
 ```
 getMax.stamina()
 ```
 
 ### Enum
-
 ```
 enum Colors {
   RED,
   BLUE
 }
 ```
-
 ```
 Colors.RED
 ```
 
 ### Fraction Type
-
 ```
 local fraction half = 1/2
 ```
-
 ```
 half + 1/4 = 3/4
 ```
@@ -75,9 +67,6 @@ half + 1/4 = 3/4
 # Syntax
 
 ## Function
-
-<!-- => [1, 2] Literals? -->
-
 ```
 x(number a, string b) -> number {
     ...
@@ -92,6 +81,17 @@ x(number a, string b) => 1  {
 }
 ```
 
+## Declaring Variable
+```
+local number a = 5
+local string b = "Hello, world!"
+global string c = "I am everywhere"
+```
+
+## Comments
+```
+// This is a comment.
+```
 
 # Instances
 ```
@@ -142,19 +142,6 @@ overload +[instance, string addend] -> number {
 instance + "n" => "cleon"
 ```
 
-# Declaring Variable
-```
-local number a = 5
-local string b = "Hello, world!"
-global string c = "I am everywhere"
-
-```
-
-## Comments
-```
-// This is a comment.
-```
-
 # Instance Constructors
 ```
 Animal(string name, number age) -> [Animal] {
@@ -171,7 +158,7 @@ Animal(string name, number age) -> [Animal] {
 local Cat = Animal("Cleo", 6)
 ```
 
-## Multiple Constructors
+### Multiple Constructors
 ```
 namespace Animal {
     createNewborn(string name) -> Animal {
