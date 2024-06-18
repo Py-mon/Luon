@@ -1,8 +1,9 @@
-# LangIdea
-
 Strives to be comment free of explaining comments by use of readable and clean code.
 
-## Custom Features
+- Classless but with Instances
+- High Readability
+
+# Custom Features
 
 ### Group Blocks of Code
 
@@ -18,14 +19,18 @@ Used for
 
 - Titling a block of code and seeing exactly what it applies to (unlike a comment would)
 - Repeating code blocks without arguments
+- Making a function, would require you to call it after you make it.
 
 Has its own scope.
 
 Can be ran again if needed by `run xyz` (not a real function so `xyz()` won't work)
 
-Acts like a normal variable and a different type of function.
-
 ### Implicit Multiplication
+
+```
+2(2) => 4
+5(3 + 2) => 25
+```
 
 ### Namespaces
 
@@ -67,9 +72,11 @@ local fraction half = 1/2
 half + 1/4 = 3/4
 ```
 
-## Syntax
+# Syntax
 
 ### Function
+
+<!-- => [1, 2] Literals? -->
 
 ```
 x(number a, string b) -> number {
@@ -77,46 +84,23 @@ x(number a, string b) -> number {
 }
 ```
 
-## Instances
+# Instances
 
 ```
-Animal(string name, number age) -> [Animal] {
-    instance = new Instance()
-    instance.name = name
-    instance.age = age
+instance = Instance()
+instance._name = "Cleo"
+instance.age = 6
 
-    return instance
+instance.hello() {
+    print("hi")
 }
-local Cat = Animal("Cleo", 6)
-```
-
-## Multiple Constructors
-
-```
-namespace Animal {
-    createNewborn(string name) -> Animal {
-        return Animal(name, 0)
-    }
-}
-```
-
-### Subclasses Sub-constructors
-
-```
-Dog(string name, number age, string species) -> [Dog] {
-    instance = Animal(name, age)
-    instance.species = species
-
-    return instance
-}
-local Cat = Animal("Cleo", 6)
 ```
 
 ### Properties
 
 ```
 property instance.name {
-    setter [new_name] {
+    setter [string new_name] {
         instance._name = new_name
     }
     getter -> string {
@@ -125,65 +109,102 @@ property instance.name {
 }
 ```
 
-### Magic Methods
+```
+instance.name => cleo
+```
+
+### Math Operations
 
 ```
-class Dog(string name, number age, string species) {
-    instance = new Animal(name, age)
-    instance.species = species
-
-    return instance
++[instance, number addend] -> number {
+    return instance.age + addend
 }
 ```
 
 ```
-//  Class Methods
-namespace Car inherits BaseCar {
-    number AmountOfCars = 0
-    number X = 5
-
-    myClassMethod() -> x {
-
-    }
-
-}
-
-    class Car(string name, number year) {
-        instance = new BaseCar()
-        instance._name = name
-        instance.year = year
-
-        instance.drive() {
-            print("drive!")
-        }
-        property instance.name {
-            setter [new_name] {
-                instance._name = new_name
-            }
-            getter -> string {
-                return instance._name.lower()
-            }
-        }
-        +[instance, Cls addend] -> number {
-            return instance.year + addend.year
-        }
-        return instance
-    }
-
-
-
+instance + 5 => 11
 ```
 
-### Declaring Variable
+### Overloading
+
+```
+overload +[instance, string addend] -> number {
+    return instance.name + addend
+}
+```
+
+```
+instance + "n" => "cleon"
+```
+
+# Declaring Variable
 
 ```
 local number a = 5
 local string b = "Hello, world!"
 global string c = "I am everywhere"
-```
-
-### Comments
 
 ```
+
+## Comments
+
+```
+
 // This is a comment.
+
+```
+
+# Instance Constructors
+
+```
+Animal(string name, number age) -> [Animal] {
+    instance = Instance()
+    instance.name = name
+    instance.age = age
+
+    instance.cry() {
+        print("asdf")
+    }
+
+    return instance
+}
+local Cat = Animal("Cleo", 6)
+```
+
+## Multiple Constructors
+
+<!--inherits namespace-->
+
+```
+namespace Animal {
+    createNewborn(string name) -> Animal {
+        return Animal(name, 0)
+    }
+}
+local Cat = Animal("Cleo", 6)
+```
+
+### Sub-Constructors
+
+```
+Dog(string name, number age, string species) -> [Dog] {
+    instance = Animal(name, age)
+    instance.species = species
+
+    instance.cry() {
+        print("woof")
+    }
+
+    return instance
+
+}
+local Doggie = Dog("Doggie", 2, "German Shepard")
+```
+
+### Inheriting Namespaces
+
+```
+namespace Dog inherits Animal
+
+Dog.createNewborn("Baby")
 ```
