@@ -10,7 +10,7 @@ A programming language concept.
 
 # Unique Features
 
-### Group Blocks of Code
+### Group and Title Blocks of Code
 ```
 run xyz {
     ...
