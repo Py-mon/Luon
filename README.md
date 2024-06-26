@@ -5,7 +5,7 @@ A programming language concept.
 
 - Typed Language
 - High Readability
-- Classless but with Instances
+- Classless but with Instances and Constructors
 - Built-in enum, overloading, fractions and more
 
 # Unique Features
