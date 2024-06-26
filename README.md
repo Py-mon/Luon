@@ -1,9 +1,12 @@
-Strives to be comment free of explaining comments by use of readable and clean code.
+# Luon 
+(Lua + Python + typing + `{}`)
 
-- Classless but with Instances
-- High Readability
-- Built-in features that are usually imported
+A programming language concept.
+
 - Typed Language
+- High Readability
+- Classless but with Instances
+- Built-in enum, overloading, fractions and more
 
 # Unique Features
 
@@ -16,11 +19,12 @@ run xyz {
 
 Basically a self-ran, zero-argument function
 
-Used for
+Used for:
 
 - Titling a block of code and seeing exactly what it applies to (unlike a comment would)
-- Repeating code blocks without arguments
-- Making a function, would require you to call it after you make it.
+- Allows for less explaining comments by having titled sections of code for more readable code
+- Repeating code-blocks without arguments
+- Making a function, would require you to call it after you make it
 
 Has its own scope.
 
@@ -232,4 +236,7 @@ Dog.createNewborn("Baby")
 ## Built-In
 - print
 - Instance
-- 
+
+# Brainstorm Next
+- Arrays
+- Loops
