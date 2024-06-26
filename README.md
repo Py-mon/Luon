@@ -1,5 +1,5 @@
 # Luon 
-(Lua + Python + typing + `{}`)
+(Lua + C-like languages + Python)
 
 A programming language concept.
 
