@@ -21,34 +21,32 @@ Basically a self-ran, zero-argument function
 
 Used for:
 
-- Titling a block of code and seeing exactly what it applies to (unlike a comment would)
-- Allows for less explaining comments by having titled sections of code for more readable code
-- Repeating code-blocks without arguments
-- Making a function, would require you to call it after you make it
-
-Has its own scope.
+- Titling a block of code and seeing exactly what it applies to (unlike a comment would).
+- Allows for less explaining comments by having titled sections of code, making everything more readable.
+- Repeating code-blocks without arguments.
+- Making a function, would require you to call it after you make it.
 
 Can be ran again if needed by `run xyz` (not a real function so `xyz()` won't work)
 
 ### Implicit Multiplication
-Multiply numbers and variables next to eachother.
+Multiply numbers and variables next to eachother using parentheses.
 ```
 2(2) => 4
 5(3 + 2) => 25
 ```
 ```
 x = 5
-2x => 10
+2(x) => 10
 ```
 
 ### Namespaces
 Organize and group functions and other variables.
 ```
 namespace getMax {
-  health() -> number {
+  health() -> Number {
     ...
   }
-  stamina() -> number {
+  stamina() -> Number {
     ...
   }
 }
@@ -58,20 +56,20 @@ getMax.stamina()
 ```
 
 ### Enum
-Store values.
+Store empty values.
 ```
-enum Colors {
+enum Color {
   RED,
   BLUE
 }
 ```
 ```
-Colors.RED
+local Color x = Color.RED
 ```
 
 ### Fraction Type
 ```
-local fraction half = 1/2
+local Fraction half = 1/2
 ```
 ```
 half + 1/4 = 3/4
@@ -81,15 +79,15 @@ half + 1/4 = 3/4
 
 ## Function
 ```
-x(number a, string b) -> number {
+x(Number a, String b) -> Number {
     ...
 }
 ```
 
 ### Literals
-Notice `=>` vs `->`
+Notice the difference in `=>` and `->`
 ```
-x(number a, string b) => 1  {
+x(Number a, String b) => 1  {
     return 1
 }
 ```
@@ -240,3 +238,4 @@ Dog.createNewborn("Baby")
 # Brainstorm Next
 - Arrays
 - Loops
+- Automatically assign types when first init a variable?
