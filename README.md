@@ -1,4 +1,4 @@
-Strives to be comment free of explaining comments by use of readable and clean code.
+Strives to be comment free of explaining comments by use of titled, readable, clean code.
 
 - Classless but with Instances
 - High Readability
